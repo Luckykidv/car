@@ -20,6 +20,14 @@ body {
     padding: 6rem;
 }
 
+@media screen  and (max-width:600px) {
+    .home{
+        border: none;
+        padding: 1rem;
+    }
+    
+}
+
 .home p{
     color: blue;
 }
@@ -42,6 +50,20 @@ body {
     
 
 
+}
+
+@media screen and (max-width:700px) {
+    .home h1{
+        text-transform: uppercase;
+        /* font-weight: 100; */
+        /* font-family: 'Courier New', Courier, monospace; */
+        /* font-display: inherit; */
+        font: optional;
+        font-size: large;
+        color: red;
+
+    }
+    
 }
 
 .home h2{
