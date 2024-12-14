@@ -68,7 +68,7 @@ body {
     .home h1{
         text-transform: uppercase;
         /* font-weight: 100; */
-        /* font-family: 'Courier New', Courier, monospace; */
+        font-family: 'Courier New', Courier, monospace; 
         /* font-display: inherit; */
         font: optional;
         font-size: large;
