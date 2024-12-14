@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <title>Leran html, css and JavaScript</title>
+    <style>
+        body{
+            /* background-color: antiquewhite; */
+            background-image: url(IMG-20240825-WA0005.jpg);
+            /* background-position:cover; */
+            background-size: cover;
+            box-shadow: 20px 20px 10px gray;
+            animation: slider 10s linear infinite;
+        }
+
+        @keyframes slider {
+            0% {background-image: url(IMG_20231207_221531_579.jpg);}
+            30%{background-image: url(IMG_20231208_150246_746.jpg);}
+            60%{background-image: url(IMG_20231225_105146_234.jpg);}
+            100%{background-image: url(IMG_20231208_171500_891.jpg);}
+        }
+
+        .list{
+            font-size: 1.5rem;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            border: solid 5px rgb(7, 196, 133);
+            padding: 2%;
+            width: 37%;
+            height: 40%;
+            margin-left: 20%;
+            /* border-radius: solid 2px; */
+        
+        }
+
+        .list ol li:hover{
+            text-transform: uppercase;
+            color: #0540e4;
+            cursor: pointer;
+        }
+
+        button{
+            margin-left: 10%;
+        }
+        
+        p{
+             margin-left: 5%;
+             font-size: 1.3rem;
+             text-indent: 0.5rem;
+             font-weight: bolder;
+             color: #0540e4;
+        }
+
+        .style-text {
+            color: #3498db; /* Setting the text color to blue*/
+            font-size: 25px;/*Setting the text size to 25px*/
+            font-family: Arial, sans-serif;/*Sets the font family of the text to Arial * sans-serif*/
+            font-weight: bold;/* Set the text to bold text weight*/
+            text-align: center;/*sets the text to allign at the center*/
+        }
+
+        .box-example {
+            width: 200px;
+            height: 100px;
+            border: solid 2px;
+            padding: 20px;
+            background-color: aqua;
+        }
+
+        .important-text p {
+            color: red;
+            font-size: 16px;
+        }
+
+        form label{
+            color: #0540e4;
+            
+
+        }
+
+        form label:hover{
+            text-transform: uppercase;
+        }
+         form input:hover{
+            background-color:bisque;
+         }
+
+         form textarea:hover{
+            background-color: aquamarine;
+         }
+
+         
+
+    </style>
+</head>
+<body>
+    <h2 style="text-align: center; color: rgb(7, 196, 133);">Simple listing formats in html</h2>
+    <hr>
+    <div class="list">
+        <ol>
+            <li>Linux
+                <ol>
+                    <li>Ubuntu</li>
+                    <li>Kali linux</li>
+                    <li>Red Hat</li>
+                </ol>
+            </li>
+
+            <li>Windows
+                <ol>
+                    <li>Windows 7</li>
+                    <li>Windows 10</li>
+                </ol>
+            </li>
+            <li>Mac</li>
+            <li>Android</li>
+        </ol>
+    </div>
+
+    <hr>
+
+    <button id="hello">click to display hello world</button>
+
+    <p id="wel" style="color: blue; text-transform: uppercase;"></p>
+
+    <button type="button" onclick="document.getElementById('wel').innerHTML = 'Hello world'">Click me</button>
+
+    <p id="sum"></p>
+    
+    <form>
+        <label for="user">Username:</label><br>
+        <input type="text" id="user" name="user"><br>
+        <label for="email">Email </label><br>
+        <input type="email" id="email" name="email"><br><br>
+        <label for="comment">Comments</label><br>
+        <textarea id="comment" name="comment" rows="4" cols="50"></textarea><br>
+        <input type="submit" value="submit">
+    </form>
+<br><br>
+    <form>
+        <input type="number" id="width" placeholder="Enter width"><br><br>
+        <input type="number" id="height" placeholder="Enter height"><br><br>
+        <button onclick="calculateArea()">calculateArea</button><br><br>
+    </form>
+
+    <p id="result"></p>
+
+
+    <p id="area"></p>
+    
+    <p class="style-text">Simple CSS text styling properties</p>
+ 
+    <div class="box-example">
+
+    </div>
+
+    <div class="important-text">
+        <p>Hello, am just here for styling lessons..No hard feelings, okay .</p>
+    </div>
+
+    <p id="day"></p>
+
+    <p id="tim">Good day</p>
+
+    <script>
+
+        function calculateArea(){
+            const width = parseFloat(document.getElementById("width").value);
+            
+            const height = parseFloat(document.getElementById("height").value);
+
+            if(isNaN(width)  ||  isNaN(height)){
+                document.getElementById("result").innerHTML = "Please enter valid numbers.";
+
+                return;
+            }
+
+            const area = width * height;
+
+            doc.getElementById("result").innerHTML = "Area of the rectangle is" + area;
+        }
+
+
+
+// let day;
+// switch (new Date().getDay()) {
+//   case 0:
+//     day = "Sunday";
+//     break;
+//   case 1:
+//     day = "Monday";
+//     break;
+//   case 2:
+//     day = "Tuesday";
+//     break;
+//   case 3:
+//     day = "Wednesday";
+//     break;
+//   case 4:
+//     day = "Thursday";
+//     break;
+//   case 5:
+//     day = "Friday";
+//     break;
+//   case  6:
+//     day = "Saturday";
+// }
+
+        let day;
+        switch(new Date().getDay()){
+            case 0:
+                day = "Sunday";
+                break;
+            case 1:
+                day = "Monday";
+                break;
+            case 2:
+                day = "Tuesday";
+                break;
+            case 3:
+                day = "Wednesday";
+                break;
+            case 4:
+                day = "Thursday";
+                break;
+            case 5:
+                day = "Friday";
+                break;
+            case 6:
+                day = "Sunday";
+                break;
+        }
+
+        document.getElementById("day").innerHTML ="Today is " + day;
+
+    
+
+        function mySum(a,b){
+        const sum = a + b;
+            return sum;
+        }
+        document.getElementById("sum").innerHTML= "Sum =" +mySum(10,7);
+        
+        function myArea(length , width){
+            area = length * width;
+            return area;
+        }
+
+        document.getElementById("area").innerHTML = "Area = " + myArea(9,7);
+
+        function myString(){
+            return "Hello world"
+        }
+
+        document.getElementById("hello").innerHTML = myString();
+        
+
+        var d = new Date();
+        var time = d.getHours();
+        if (time < 18){
+            document.getElementById("tim").innerHTML = "Lunch time";
+            // document.getElementById("tim").innerHTML = time;
+        }
+
+        if (new Date().getHours() < 18) {
+  document.getElementById("").innerHTML = "Good day!";
+}
+
+    </script>
+</body>
+</html>

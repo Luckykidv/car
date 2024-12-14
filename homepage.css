@@ -1,0 +1,113 @@
+body {
+    justify-content: center;
+    background-image:url(markx.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    /* background: 20%; */
+    /* grid-auto-flow: column; */
+}
+
+.home{
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+    min-height: 100vh;
+    border-right-color: brown;
+    border-bottom-color: red;
+    border: solid 2px green;
+    padding: 6rem;
+}
+
+.home p{
+    color: blue;
+}
+
+/* .home{
+    width: 70%;
+    height: fit-content;
+    border: solid 5px green;
+    border-right-color: brown;
+    border-bottom-color: red;
+    margin-left: 20%;
+    margin-top: 15%;
+    padding: 3rem;
+} */
+
+.home h1{
+    color: lightblue;
+    font-weight: bold;
+    font-size: 5rem;
+    
+
+
+}
+
+.home h2{
+    color: gray;
+}
+
+.home ul{
+    color: aqua;
+}
+.home img{
+    position: relative;
+    float: right;
+    padding: 2rem;
+    width: unset;
+    height: fit-content;
+
+}
+.home img:hover{
+    /* float: left; */
+    opacity: 60%;
+    cursor: pointer;
+}
+.home footer{
+    text-align: center;
+    color: lightblue;
+}
+
+.home h1:hover{
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: lightgreen;
+}
+.content{
+    border: solid 2px red;
+    width: max-content;
+    height: max-content;
+    padding: 2rem;
+    
+}
+.content q{
+    color: green;
+}
+.content h3{
+    color: gray;
+}
+.content p{
+    color: lightblue;
+}
+.content address{
+    color: beige;
+}
+
+.home button{
+    float:right;
+    position: relative;
+    border-radius: 2px;
+    padding: 1rem;
+}
+
+.home button:hover{
+    background-color: red;
+    text-transform: uppercase;
+    color: blue;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+    width: max-content;
+    max-height: fit-content;
+    box-sizing: border-box;
+}
